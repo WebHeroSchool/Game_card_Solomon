@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game of Bug</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="section">
+        <h1 class="title">Выберите уровень сложности:</h1>
+        <p class="description">Выберите сложность и игра начнется.
+          Чем выше уровень - тем больше будет выборка карт. </p>
+        <div class="nav">
+          <div>
+            <input tabindex="1" checked class="nav__easy" type="radio" name="level">Простой
+          </div>
+          <div>
+            <input tabindex="1" class="nav__normal" type="radio" name="level">Средний
+          </div>
+          <div>
+            <input tabindex="1" class="nav__hard" type="radio" name="level">Сложный
+          </div>
+        </div>
+        <br>
+        <div>
+          <input tabindex="4" class="button" type="button" value="Начать игру">
+        </div>
+        <div class="card">
+          <div class="card__one"></div>
+          <div class="card__two"></div>
+        </div>
+      </section>
+    </div>
+    <link rel="stylesheet" href="script.js">
+  </body>
+</html>
