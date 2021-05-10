@@ -5,33 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Game of Bug</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
   </head>
-  <body>
+  <body class="body">
     <div class="wrapper">
-      <section class="section">
-        <h1 class="title">Выберите уровень сложности:</h1>
-        <p class="description">Выберите сложность и игра начнется.
-          Чем выше уровень - тем больше будет выборка карт. </p>
-        <div class="nav">
-          <div>
-            <input tabindex="1" checked class="nav__easy" type="radio" name="level">Простой
+      <h1 class="title">Выберите уровень сложности:</h1>
+      <p class="description">Выберите сложность и игра начнется.
+        Чем выше уровень - тем больше будет выборка карт. </p>
+      <div class="section">
+        <div class="content">
+          <div class="nav">
+            <p class="nav__easy mark">Простой</p>
+            <p class="nav__normal">Средний</p>
+            <p class="nav__hard">Сложный</p>
           </div>
+          <br>
           <div>
-            <input tabindex="1" class="nav__normal" type="radio" name="level">Средний
-          </div>
-          <div>
-            <input tabindex="1" class="nav__hard" type="radio" name="level">Сложный
+            <a class="button" href="#">Начать игру</a>
           </div>
         </div>
-        <br>
-        <div>
-          <input tabindex="4" class="button" type="button" value="Начать игру">
-        </div>
-        <div class="card">
+          <div class="cards">
           <div class="card__one"></div>
           <div class="card__two"></div>
         </div>
-      </section>
+      </div>
     </div>
     <link rel="stylesheet" href="script.js">
   </body>
