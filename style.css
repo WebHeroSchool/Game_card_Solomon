@@ -88,6 +88,7 @@ html{
   box-shadow: 2px 4px 6px #524646;
   letter-spacing: 1px;
   transition: all 150ms linear;
+  cursor: pointer;
 }
 
 .button:hover {
