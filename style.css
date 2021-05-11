@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .body {
   max-width: 1440px;
   max-height: 1024px;
@@ -52,7 +56,14 @@
   margin: 0;
   cursor: pointer;
   position: relative;
+  transition: color 1s;
 }
+
+.nav__easy:hover, .nav__normal:hover, .nav__hard:hover{
+  color: skyblue;
+}
+
+/*При клике будет метка Before*/
 
 .mark::before {
   background: url("images/Rectangle2.png") no-repeat center;
@@ -74,6 +85,18 @@
   background: #D62B2E;
   border-radius: 10px;
   padding: 29px 85px;
+  box-shadow: 2px 4px 6px #524646;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+}
+
+.button:hover {
+  background: #bf2528;
+  border: 1px solid #2d2727;
+  box-shadow: 1px 1px 2px #5c3636;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #401111;
+  transition: all 250ms linear;
 }
 
 .cards {
@@ -100,6 +123,47 @@
   background-size: 59%;
   background-position-x: 202px;
   background-position-y: 233px;
+  position: absolute;
+}
+
+/* Скрываем меню */
+.hidden {
+  display: none;
+}
+
+/*  */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding-top: 61px;
+}
+
+/* Игровые карты */
+.card {
+  position: relative;
+  width: 218px;
+  height: 341px;
+  margin: 12px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.card__front {
+  position: absolute;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card__back {
   position: absolute;
 }
 
@@ -279,7 +343,7 @@
   
   .mark::before {
     width: 2vw;
-    height: 3vh;
+    height: 4vh;
     margin-left: -4vw;
   }
   
