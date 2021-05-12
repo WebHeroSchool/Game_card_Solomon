@@ -138,14 +138,16 @@ html{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .game {
   display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  padding-top: 61px;
+  /*height: 100vh;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*padding-top: 61px;*/
+  flex-direction: column;
 }
 
 /* Игровые карты */

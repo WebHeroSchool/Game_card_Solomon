@@ -7,6 +7,19 @@ let levelHard = document.querySelector('.nav__hard');
 let button = document.querySelector('.button');
 let menu = document.querySelector('.menu')
 let game = document.querySelector('.game')
+let cardGO = `
+  <div class="card">
+    <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+    <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+  </div>`
+let cardBUG = `
+  <div class="card">
+    <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+    <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
+  </div>`
+let easy = `<div class="flex">${cardGO} ${cardBUG} ${cardGO}</div>`
+let normal = `<div class="flex">${cardGO} ${cardBUG} ${cardGO} </div> <div class="flex">${cardGO} ${cardGO} ${cardGO}</div>`
+let hard = `<div class="flex">${cardGO} ${cardBUG} ${cardGO} ${cardGO} ${cardGO}</div> <div class="flex">${cardGO} ${cardGO} ${cardGO} ${cardGO} ${cardGO}</div>`
 
 // 1.2. При клике на уровень сложности назначается класс mark.
 
@@ -36,8 +49,8 @@ levelHard.addEventListener('click', markHard);
 // Вместе с этим идет поиск уровня и запускает функцию с соответствующим уровнем.
 
 function hiddenMenu () {
-  menu.classList.add('hidden')
-  game.classList.remove('hidden')
+  menu.classList.toggle('hidden')
+  game.classList.toggle('flex')
 }
 
 function discoverLevel() {
@@ -54,89 +67,21 @@ function discoverLevel() {
 }
 
 function showEasy () {
-  game.innerHTML = `
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>`
+  game.innerHTML = `${easy}`
 }
 
 function showNormal () {
-  game.innerHTML =`
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>`
+  game.innerHTML =`${normal}`
 }
 
 function showHard () {
-  game.innerHTML =`
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>
-<div class="card">
-  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
-</div>`
+  game.innerHTML =`${hard}`
 }
 
 button.addEventListener('click', discoverLevel );
 
-// Нажимая на кнопку "Начать игру", скрывается меню и выдается нужное количество карт карт
+// При нажатии на карту, происходит переворачивание.
+
+// Карта BUG появляется рандомно? Если надо.
+
+// При клике на открытую карту возврат меню
