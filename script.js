@@ -45,25 +45,97 @@ function hiddenMenu () {
 function discoverLevel() {
   if (easy = true) {
     showEasy ()
-  } if (normal = true) {
-    markHard ()
-  } if (hard = true) {
-    markHard ()
     hiddenMenu ()
-  } else {
-    console.error(onerror)
+  } else if (normal = true) {
+    showNormal ()
+    hiddenMenu ()
+  } else if (hard = true) {
+    showHard ()
+    hiddenMenu ()
   }
 }
 
 function showEasy () {
-  game.innerHTML = `<div class="card">
+  game.innerHTML = `
+<div class="card">
   <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
   <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
 </div>
-
 <div class="card">
   <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
   <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>`
+}
+
+function showNormal () {
+  game.innerHTML =`
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>`
+}
+
+function showHard () {
+  game.innerHTML =`
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+</div>
+<div class="card">
+  <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
+  <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
 </div>`
 }
 
