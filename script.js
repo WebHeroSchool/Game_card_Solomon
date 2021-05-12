@@ -5,9 +5,6 @@ let levelEasy = document.querySelector('.nav__easy');
 let levelNormal = document.querySelector('.nav__normal');
 let levelHard = document.querySelector('.nav__hard');
 let button = document.querySelector('.button');
-let easy = document.querySelector('.mark');
-let normal = document.querySelector('.mark');
-let hard = document.querySelector('.mark');
 let menu = document.querySelector('.menu')
 let game = document.querySelector('.game')
 
@@ -40,16 +37,17 @@ levelHard.addEventListener('click', markHard);
 
 function hiddenMenu () {
   menu.classList.add('hidden')
+  game.classList.remove('hidden')
 }
 
 function discoverLevel() {
-  if (easy = true) {
+  if (levelEasy.classList.contains('mark')) {
     showEasy ()
     hiddenMenu ()
-  } else if (normal = true) {
+  } else if (levelNormal.classList.contains('mark')) {
     showNormal ()
     hiddenMenu ()
-  } else if (hard = true) {
+  } else if (levelHard.classList.contains('mark')) {
     showHard ()
     hiddenMenu ()
   }
