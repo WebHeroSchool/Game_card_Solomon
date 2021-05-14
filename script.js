@@ -78,9 +78,9 @@ function showEasy () {
     console.log(item)
     cards = document.querySelector('.game-card')
     function up() {
-      cards.classList.toggle('active');
+      item.classList.toggle('active');
     }
-    cards.addEventListener('click', up);
+    item.addEventListener('click', up);
   })
 }
 
@@ -88,12 +88,28 @@ function showNormal () {
   game.innerHTML =`${normal}`
   cards = document.querySelectorAll('.game-card');
   console.log(cards)
+  cards.forEach(function (item) {
+    console.log(item)
+    cards = document.querySelector('.game-card')
+    function up() {
+      item.classList.toggle('active');
+    }
+    item.addEventListener('click', up);
+  })
 }
 
 function showHard () {
   game.innerHTML =`${hard}`
   cards = document.querySelectorAll('.game-card');
   console.log(cards)
+  cards.forEach(function (item) {
+    console.log(item)
+    cards = document.querySelector('.game-card')
+    function up() {
+      item.classList.toggle('active');
+    }
+    item.addEventListener('click', up);
+  })
 }
 
 button.addEventListener('click', discoverLevel );
