@@ -8,19 +8,23 @@ let button = document.querySelector('.button');
 let menu = document.querySelector('.menu')
 let game = document.querySelector('.game')
 let cardGO = `
-  <div class="card">
-    <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-    <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+  <div class = "container" >
+    <div class = "game-card">
+      <div class = "game-card__front"></div>
+      <div class = "game-card__back"></div>
+    </div>
   </div>`
 let cardBUG = `
-  <div class="card">
-    <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-    <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
+  <div class = "container" >
+    <div class = "game-card">
+      <div class = "game-card__front"></div>
+      <div class = "game-card__back"></div>
+    </div>
   </div>`
 let easy = `<div class="flex">${cardGO} ${cardBUG} ${cardGO}</div>`
 let normal = `<div class="flex">${cardGO} ${cardBUG} ${cardGO} </div> <div class="flex">${cardGO} ${cardGO} ${cardGO}</div>`
 let hard = `<div class="flex">${cardGO} ${cardBUG} ${cardGO} ${cardGO} ${cardGO}</div> <div class="flex">${cardGO} ${cardGO} ${cardGO} ${cardGO} ${cardGO}</div>`
-
+let cards;
 // 1.2. При клике на уровень сложности назначается класс mark.
 
 function markEasy () {
@@ -68,14 +72,20 @@ function discoverLevel() {
 
 function showEasy () {
   game.innerHTML = `${easy}`
+  cards = document.querySelectorAll('.game-card');
+  console.log(cards)
 }
 
 function showNormal () {
   game.innerHTML =`${normal}`
+  cards = document.querySelectorAll('.game-card');
+  console.log(cards)
 }
 
 function showHard () {
   game.innerHTML =`${hard}`
+  cards = document.querySelectorAll('.game-card');
+  console.log(cards)
 }
 
 button.addEventListener('click', discoverLevel );
