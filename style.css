@@ -1,0 +1,408 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.body {
+  max-width: 1440px;
+  max-height: 1024px;
+  margin: 0 auto;
+  background: url("images/Background.png") center;
+  background-size: 171%;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 128px 69px 0 102px;
+}
+
+.title {
+  font-family: roboto_Bold, Arial, sans-serif;
+  font-size: 57px;
+  line-height: 67px;
+  font-weight: bold;
+  color: #FFF;
+  padding: 0;
+  margin: 0 0 9px 0;
+}
+
+.description {
+  font-family: roboto_Medium, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 100;
+  color: #FFF;
+  padding: 0;
+  margin: 0 0 60px 0;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  font-family: roboto_Bold, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 59px;
+  font-weight: bold;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 99px 0;
+}
+
+.nav__easy, .nav__normal, .nav__hard {
+  padding: 0 0 25px 50px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 1s;
+}
+
+.nav__easy:hover, .nav__normal:hover, .nav__hard:hover{
+  color: skyblue;
+}
+
+/*При клике будет метка Before*/
+
+.mark::before {
+  background: url("images/Rectangle2.png") no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  content: "";
+  width: 7%;
+  height: 75%;
+  margin-left: -48px;
+}
+
+.button {
+  font-family: roboto_Bold, Arial, sans-serif;
+  font-size: 32px;
+  line-height: 37px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+  background: #D62B2E;
+  border-radius: 10px;
+  padding: 29px 85px;
+  box-shadow: 2px 4px 6px #524646;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #bf2528;
+  border: 1px solid #2d2727;
+  box-shadow: 1px 1px 2px #5c3636;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #401111;
+  transition: all 250ms linear;
+}
+
+.cards {
+  width: 41vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__one {
+  width: 41%;
+  height: 100%;
+  background: url("images/Карта 1.1.png") no-repeat;
+  background-size: 49%;
+  background-position-y: 226px;
+  background-position-x: 75px;
+  position: absolute;
+}
+
+.card__two {
+  width: 46%;
+  height: 100%;
+  background: url("images/Карта 2 (ховер).1.png") no-repeat;
+  background-size: 59%;
+  background-position-x: 202px;
+  background-position-y: 233px;
+  position: absolute;
+}
+
+/* Скрываем меню */
+.hidden {
+  display: none;
+}
+
+/*  */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.game {
+  display: flex;
+  /*height: 100vh;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*padding-top: 61px;*/
+  flex-direction: column;
+}
+
+/* Игровые карты */
+.card {
+  position: relative;
+  width: 218px;
+  height: 341px;
+  margin: 12px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.card__front {
+  position: absolute;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card__back {
+  position: absolute;
+}
+
+@media (min-width: 1441px) {
+  .cards {
+    width: 43vw;
+  }
+  
+  .card__one {
+    width: 550px;
+  }
+  
+  .card__two {
+    width: 620px;
+  }
+}
+
+@media (min-width: 2018px) {
+  .cards {
+    width: 35vw;
+  }
+}
+
+@media (min-width: 2128px) {
+  .cards {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 3450px) {
+  .cards {
+    width: 16vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .body {
+    height: 100%;
+  }
+  
+  .wrapper {
+    padding: 88px 69px 0 72px;
+  }
+  
+  .title {
+    font-size: 40px;
+    line-height: 54px;
+    margin: 0;
+  }
+  
+  .description {
+    font-size: 13px;
+    margin: 0 0 42px 0;
+  }
+  
+  .nav {
+    font-size: 35px;
+    line-height: 31px;
+    margin: 0 0 52px 0;
+  }
+  
+  .button {
+    font-size: 22px;
+  }
+  
+  .nav__easy, .nav__normal, .nav__hard {
+    padding: 0 0 28px 34px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .mark::before {
+    width: 6%;
+    height: 55%;
+    margin-left: -34px;
+  }
+  
+  .button {
+    padding: 21px 61px;
+  }
+  
+  .card__one {
+    background-position-y: 152px;
+    background-position-x: 69px;
+  }
+  
+  .card__two {
+    background-position-x: 159px;
+    background-position-y: 158px;
+  }
+}
+
+@media (max-width: 842px) {
+  .card__one {
+    background-position-y: 152px;
+    background-position-x: 0;
+  }
+  
+  .card__two {
+    background-position-x: 63px;
+    background-position-y: 158px;
+  }
+}
+
+@media (max-width: 727px) {
+  .wrapper {
+    padding: 64px 69px 0 53px;
+  }
+  
+  .title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  
+  .description {
+    font-size: 9px;
+    margin: 0 0 23px 0;
+  }
+  
+  .nav {
+    font-size: 25px;
+    margin: 0 0 33px 0;
+  }
+  
+  .nav__easy, .nav__normal, .nav__hard {
+    padding: 0 0 10px 24px;
+  }
+  
+  .mark::before {
+    width: 6%;
+    height: 70%;
+    margin-left: -24px;
+  }
+  
+  .button {
+    padding: 15px 42px;
+    font-size: 16px;
+  }
+  
+  .cards {
+    width: 43vw;
+  }
+  
+  .card__one {
+    background-position-y: 103px;
+    background-position-x: 0;
+  }
+  
+  .card__two {
+    background-position-x: 66px;
+    background-position-y: 107px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 30px 40px;
+  }
+  
+  .title {
+    font-size: 5vw;
+  }
+  
+  .description {
+    font-size: 1.6vw;
+  }
+  
+  .nav {
+    font-size: 4vw;
+    margin: 0 0 7px 0;
+  }
+  
+  .nav__easy, .nav__normal, .nav__hard {
+    padding: 0 4vw;
+  }
+  
+  .mark::before {
+    width: 2vw;
+    height: 4vh;
+    margin-left: -4vw;
+  }
+  
+  .card__one {
+    background-position-y: 49px;
+    background-position-x: 0;
+  }
+  
+  .card__two {
+    background-position-x: 49px;
+    background-position-y: 55px;
+  }
+}
+
+@media (max-width: 490px) {
+  .wrapper {
+    padding: 54px 40px;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav__easy, .nav__normal, .nav__hard {
+    padding: 0 4vw;
+    align-self: center;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 3vw;
+  }
+  
+  .button {
+    padding: 2vh 23vw;
+    font-size: 4vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .cards {
+    justify-content: center;
+    align-self: center;
+  }
+  
+  .cards {
+    height: 100%;
+  }
+  
+  .card__two {
+    height: 100%;
+  }
+}
