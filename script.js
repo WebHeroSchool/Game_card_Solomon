@@ -76,6 +76,11 @@ function showEasy () {
   console.log(cards)
   cards.forEach(function (item) {
     console.log(item)
+    cards = document.querySelector('.game-card')
+    function up() {
+      cards.classList.toggle('active');
+    }
+    cards.addEventListener('click', up);
   })
 }
 
