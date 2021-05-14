@@ -74,6 +74,9 @@ function showEasy () {
   game.innerHTML = `${easy}`
   cards = document.querySelectorAll('.game-card');
   console.log(cards)
+  cards.forEach(function (item) {
+    console.log(item)
+  })
 }
 
 function showNormal () {
