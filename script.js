@@ -8,19 +8,23 @@ let button = document.querySelector('.button');
 let menu = document.querySelector('.menu')
 let game = document.querySelector('.game')
 let cardGO = `
-  <div class="card">
-    <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-    <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+  <div class = "container" >
+    <div class = "game-card" id="card">
+      <div class = "game-card__front"></div>
+      <div class = "game-card__back"></div>
+    </div>
   </div>`
 let cardBUG = `
-  <div class="card">
-    <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-    <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
+  <div class = "container" >
+    <div class = "game-card" id="card">
+      <div class = "game-card__front"></div>
+      <div class = "game-card__back"></div>
+    </div>
   </div>`
 let easy = `<div class="flex">${cardGO} ${cardBUG} ${cardGO}</div>`
 let normal = `<div class="flex">${cardGO} ${cardBUG} ${cardGO} </div> <div class="flex">${cardGO} ${cardGO} ${cardGO}</div>`
 let hard = `<div class="flex">${cardGO} ${cardBUG} ${cardGO} ${cardGO} ${cardGO}</div> <div class="flex">${cardGO} ${cardGO} ${cardGO} ${cardGO} ${cardGO}</div>`
-
+let card;
 // 1.2. При клике на уровень сложности назначается класс mark.
 
 function markEasy () {
@@ -57,25 +61,31 @@ function discoverLevel() {
   if (levelEasy.classList.contains('mark')) {
     showEasy ()
     hiddenMenu ()
+    card = document.getElementById('.card')
   } else if (levelNormal.classList.contains('mark')) {
     showNormal ()
     hiddenMenu ()
+    card = document.getElementById('.card')
   } else if (levelHard.classList.contains('mark')) {
     showHard ()
     hiddenMenu ()
+    card = document.getElementById('.card')
   }
 }
 
 function showEasy () {
   game.innerHTML = `${easy}`
+  card = document.getElementById('.card')
 }
 
 function showNormal () {
   game.innerHTML =`${normal}`
+  card = document.getElementById('.card')
 }
 
 function showHard () {
   game.innerHTML =`${hard}`
+  card = document.getElementById('.card')
 }
 
 button.addEventListener('click', discoverLevel );
@@ -85,3 +95,9 @@ button.addEventListener('click', discoverLevel );
 // Карта BUG появляется рандомно? Если надо.
 
 // При клике на открытую карту возврат меню
+
+function up() {
+  card.classList.toggle('active');
+}
+
+card.addEventListener('click', up);
