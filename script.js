@@ -74,7 +74,7 @@ function showEasy () {
   game.innerHTML = `${easy}`
   cards = document.querySelectorAll('.game-card');
   cards.forEach(function (item) {
-    cards = document.querySelector('.game-card')
+    // При нажатии на карту, происходит переворачивание.
     function up() {
       item.classList.toggle('active');
     }
@@ -86,7 +86,7 @@ function showNormal () {
   game.innerHTML =`${normal}`
   cards = document.querySelectorAll('.game-card');
   cards.forEach(function (item) {
-    cards = document.querySelector('.game-card')
+    // При нажатии на карту, происходит переворачивание.
     function up() {
       item.classList.toggle('active');
     }
@@ -98,7 +98,7 @@ function showHard () {
   game.innerHTML =`${hard}`
   cards = document.querySelectorAll('.game-card');
   cards.forEach(function (item) {
-    cards = document.querySelector('.game-card')
+    // При нажатии на карту, происходит переворачивание.
     function up() {
       item.classList.toggle('active');
     }
@@ -109,8 +109,6 @@ function showHard () {
 button.addEventListener('click', discoverLevel );
 //1111111 обойтись одной функцией для отрисовки карт,
 // внутри поставить условие, чтобы в зависимости от уровня выдавалось нужное количество карт
-
-// При нажатии на карту, происходит переворачивание.
 
 // Карта BUG появляется рандомно? Если надо.
 
