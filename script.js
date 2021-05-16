@@ -73,9 +73,7 @@ function discoverLevel() {
 function showEasy () {
   game.innerHTML = `${easy}`
   cards = document.querySelectorAll('.game-card');
-  console.log(cards)
   cards.forEach(function (item) {
-    console.log(item)
     cards = document.querySelector('.game-card')
     function up() {
       item.classList.toggle('active');
@@ -87,9 +85,7 @@ function showEasy () {
 function showNormal () {
   game.innerHTML =`${normal}`
   cards = document.querySelectorAll('.game-card');
-  console.log(cards)
   cards.forEach(function (item) {
-    console.log(item)
     cards = document.querySelector('.game-card')
     function up() {
       item.classList.toggle('active');
@@ -101,9 +97,7 @@ function showNormal () {
 function showHard () {
   game.innerHTML =`${hard}`
   cards = document.querySelectorAll('.game-card');
-  console.log(cards)
   cards.forEach(function (item) {
-    console.log(item)
     cards = document.querySelector('.game-card')
     function up() {
       item.classList.toggle('active');
@@ -113,6 +107,8 @@ function showHard () {
 }
 
 button.addEventListener('click', discoverLevel );
+//1111111 обойтись одной функцией для отрисовки карт,
+// внутри поставить условие, чтобы в зависимости от уровня выдавалось нужное количество карт
 
 // При нажатии на карту, происходит переворачивание.
 
