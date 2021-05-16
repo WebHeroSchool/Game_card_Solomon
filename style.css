@@ -1,5 +1,5 @@
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .body {
@@ -127,99 +127,74 @@ html{
   position: absolute;
 }
 
-/* Скрываем меню */
+/* Работа с меню и картами */
 .hidden {
   display: none;
 }
-
-/*  */
 
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  width: 86vw;
+  height: 53vw;
 }
 
 .game {
-  display: flex;
-  /*height: 100vh;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
-  /*padding-top: 61px;*/
   flex-direction: column;
 }
 
 /* Игровые карты */
 
 .container {
-    width: 195px;
-    height: 320px;
-    perspective: 1000px;
-    background-color: transparent;
-    border: 1px solid #204385;
+  background-color: transparent;
+  width: 15vw;
+  height: 24vw;
+  perspective: 1000px;
+  padding: 0.9vw;
 }
 
 .game-card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.active {
-    transform: rotateX(180deg);
-}
-
-.game-card__front, .game-card__back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.game-card__front {
-    background: url('https://mobimg.b-cdn.net/pic/v2/gallery/111x185/ezhiki-kosmos-multfilmy-risunki-4684.jpg') #000 no-repeat;
-    background-size: 100%;
-}
-
-.game-card__back {
-    background: url('https://mobimg.b-cdn.net/pic/v2/gallery/111x185/obezyany-risunki-yumor-8650.jpg') #ff0000 no-repeat;
-    background-size: 100%;;
-    transform: rotateX(180deg);
-}
-
-.card {
   position: relative;
-  width: 218px;
-  height: 341px;
-  margin: 12px;
-  -webkit-transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
   transform-style: preserve-3d;
 }
 
-.card__front {
-  position: absolute;
-  -webkit-transform: rotateY(180deg);
+.active {
   transform: rotateY(180deg);
 }
 
-.card__back {
+.game-card__front, .game-card__back {
   position: absolute;
+  width: 103%;
+  height: 105%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.game-card__front {
+  background: url('images/Карта BACK.png') no-repeat;
+  background-size: 100%;
+}
+
+.game-card__back {
+  background: url('images/Карта Game Over.png') no-repeat;
+  background-size: 99%;
+  transform: rotateY(180deg);
 }
 
 @media (min-width: 1441px) {
   .cards {
     width: 43vw;
   }
-  
+
   .card__one {
     width: 550px;
   }
-  
+
   .card__two {
     width: 620px;
   }
@@ -247,54 +222,54 @@ html{
   .body {
     height: 100%;
   }
-  
+
   .wrapper {
     padding: 88px 69px 0 72px;
   }
-  
+
   .title {
     font-size: 40px;
     line-height: 54px;
     margin: 0;
   }
-  
+
   .description {
     font-size: 13px;
     margin: 0 0 42px 0;
   }
-  
+
   .nav {
     font-size: 35px;
     line-height: 31px;
     margin: 0 0 52px 0;
   }
-  
+
   .button {
     font-size: 22px;
   }
-  
+
   .nav__easy, .nav__normal, .nav__hard {
     padding: 0 0 28px 34px;
     margin: 0;
     cursor: pointer;
     position: relative;
   }
-  
+
   .mark::before {
     width: 6%;
     height: 55%;
     margin-left: -34px;
   }
-  
+
   .button {
     padding: 21px 61px;
   }
-  
+
   .card__one {
     background-position-y: 152px;
     background-position-x: 69px;
   }
-  
+
   .card__two {
     background-position-x: 159px;
     background-position-y: 158px;
@@ -306,7 +281,7 @@ html{
     background-position-y: 152px;
     background-position-x: 0;
   }
-  
+
   .card__two {
     background-position-x: 63px;
     background-position-y: 158px;
@@ -317,46 +292,46 @@ html{
   .wrapper {
     padding: 64px 69px 0 53px;
   }
-  
+
   .title {
     font-size: 28px;
     line-height: 34px;
   }
-  
+
   .description {
     font-size: 9px;
     margin: 0 0 23px 0;
   }
-  
+
   .nav {
     font-size: 25px;
     margin: 0 0 33px 0;
   }
-  
+
   .nav__easy, .nav__normal, .nav__hard {
     padding: 0 0 10px 24px;
   }
-  
+
   .mark::before {
     width: 6%;
     height: 70%;
     margin-left: -24px;
   }
-  
+
   .button {
     padding: 15px 42px;
     font-size: 16px;
   }
-  
+
   .cards {
     width: 43vw;
   }
-  
+
   .card__one {
     background-position-y: 103px;
     background-position-x: 0;
   }
-  
+
   .card__two {
     background-position-x: 66px;
     background-position-y: 107px;
@@ -367,35 +342,35 @@ html{
   .wrapper {
     padding: 30px 40px;
   }
-  
+
   .title {
     font-size: 5vw;
   }
-  
+
   .description {
     font-size: 1.6vw;
   }
-  
+
   .nav {
     font-size: 4vw;
     margin: 0 0 7px 0;
   }
-  
+
   .nav__easy, .nav__normal, .nav__hard {
     padding: 0 4vw;
   }
-  
+
   .mark::before {
     width: 2vw;
     height: 4vh;
     margin-left: -4vw;
   }
-  
+
   .card__one {
     background-position-y: 49px;
     background-position-x: 0;
   }
-  
+
   .card__two {
     background-position-x: 49px;
     background-position-y: 55px;
@@ -406,26 +381,26 @@ html{
   .wrapper {
     padding: 54px 40px;
   }
-  
+
   .section {
     display: flex;
     flex-direction: column;
   }
-  
+
   .nav__easy, .nav__normal, .nav__hard {
     padding: 0 4vw;
     align-self: center;
   }
-  
+
   .title {
     text-align: center;
   }
-  
+
   .description {
     text-align: center;
     font-size: 3vw;
   }
-  
+
   .button {
     padding: 2vh 23vw;
     font-size: 4vw;
@@ -433,16 +408,16 @@ html{
     justify-content: center;
     display: flex;
   }
-  
+
   .cards {
     justify-content: center;
     align-self: center;
   }
-  
+
   .cards {
     height: 100%;
   }
-  
+
   .card__two {
     height: 100%;
   }
