@@ -167,7 +167,7 @@ html{
   transform: rotateY(180deg);
 }
 
-.game-card__front, .game-card__back {
+.game-card__front, .game-card__back, .game-card__bug{
   position: absolute;
   width: 103%;
   height: 105%;
@@ -182,6 +182,12 @@ html{
 
 .game-card__back {
   background: url('images/Карта Game Over.png') no-repeat;
+  background-size: 99%;
+  transform: rotateY(180deg);
+}
+
+.game-card__bug {
+  background: url('images/Карта BUG.png') no-repeat;
   background-size: 99%;
   transform: rotateY(180deg);
 }

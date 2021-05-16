@@ -18,7 +18,7 @@ let cardBUG = `
   <div class = "container" >
     <div class = "game-card">
       <div class = "game-card__front"></div>
-      <div class = "game-card__back"></div>
+      <div class = "game-card__bug"></div>
     </div>
   </div>`
 let easy = `<div class="flex">${cardGO} ${cardBUG} ${cardGO}</div>`
@@ -75,8 +75,15 @@ function showEasy () {
   cards = document.querySelectorAll('.game-card');
   cards.forEach(function (item) {
     // При нажатии на карту, происходит переворачивание.
+    let i = 0;
     function up() {
-      item.classList.toggle('active');
+      if (i < 2) {
+        item.classList.add('active');
+        i++;
+      } if (i === 2) {
+        hiddenMenu();
+        i++;
+      }
     }
     item.addEventListener('click', up);
   })
@@ -87,8 +94,15 @@ function showNormal () {
   cards = document.querySelectorAll('.game-card');
   cards.forEach(function (item) {
     // При нажатии на карту, происходит переворачивание.
+    let i = 0;
     function up() {
-      item.classList.toggle('active');
+      if (i < 2) {
+        item.classList.add('active');
+        i++;
+      } if (i === 2) {
+        hiddenMenu();
+        i++;
+      }
     }
     item.addEventListener('click', up);
   })
@@ -99,8 +113,15 @@ function showHard () {
   cards = document.querySelectorAll('.game-card');
   cards.forEach(function (item) {
     // При нажатии на карту, происходит переворачивание.
+    let i = 0;
     function up() {
-      item.classList.toggle('active');
+      if (i < 2) {
+        item.classList.toggle('active');
+        i++;
+      } if (i === 2) {
+        hiddenMenu();
+        i++;
+      }
     }
     item.addEventListener('click', up);
   })
