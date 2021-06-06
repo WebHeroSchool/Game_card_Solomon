@@ -8,19 +8,23 @@ let button = document.querySelector('.button');
 let menu = document.querySelector('.menu')
 let game = document.querySelector('.game')
 let cardGO = `
-  <div class="card">
-    <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-    <img class="card__front" src="images/Карта%20Game%20Over.png" alt="Игра окончена">
+  <div class = "container" >
+    <div class = "game-card">
+      <div class = "game-card__front"></div>
+      <div class = "game-card__back"></div>
+    </div>
   </div>`
 let cardBUG = `
-  <div class="card">
-    <img class="card__back" src="images/Карта%20BACK.png" alt="задняя сторона">
-    <img class="card__front" src="images/Карта%20BUG.png" alt="Победа!">
+  <div class = "container" >
+    <div class = "game-card">
+      <div class = "game-card__front"></div>
+      <div class = "game-card__bug"></div>
+    </div>
   </div>`
 let easy = `<div class="flex">${cardGO} ${cardBUG} ${cardGO}</div>`
 let normal = `<div class="flex">${cardGO} ${cardBUG} ${cardGO} </div> <div class="flex">${cardGO} ${cardGO} ${cardGO}</div>`
 let hard = `<div class="flex">${cardGO} ${cardBUG} ${cardGO} ${cardGO} ${cardGO}</div> <div class="flex">${cardGO} ${cardGO} ${cardGO} ${cardGO} ${cardGO}</div>`
-
+let cards;
 // 1.2. При клике на уровень сложности назначается класс mark.
 
 function markEasy () {
@@ -47,6 +51,20 @@ levelHard.addEventListener('click', markHard);
 
 // 2. При нажатии кнопки "Начать игру" скрывается меню.
 // Вместе с этим идет поиск уровня и запускает функцию с соответствующим уровнем.
+// РАНДОМ КОД
+// var one = [1, 2, 3, 4, 5, 6];
+//
+// let shuffle = function(arr) {
+//   for (let i = arr.length - 1; i > 0; i--) {
+//     let tmp = arr[i];
+//     let rnd = Math.floor(Math.random() * (i + 1))
+//
+//     arr[i] = arr[rnd];
+//     arr[rnd] = tmp;
+//   }
+//   return arr
+// }
+// shuffle(one)
 
 function hiddenMenu () {
   menu.classList.toggle('hidden')
@@ -68,19 +86,64 @@ function discoverLevel() {
 
 function showEasy () {
   game.innerHTML = `${easy}`
+  cards = document.querySelectorAll('.game-card');
+  cards.forEach(function (item) {
+    // При нажатии на карту, происходит переворачивание.
+    let i = 0;
+    function up() {
+      if (i < 2) {
+        item.classList.add('active');
+        i++;
+      } if (i === 2) {
+        hiddenMenu();
+        i++;
+      }
+    }
+    item.addEventListener('click', up);
+  })
 }
 
 function showNormal () {
   game.innerHTML =`${normal}`
+  cards = document.querySelectorAll('.game-card');
+  cards.forEach(function (item) {
+    // При нажатии на карту, происходит переворачивание.
+    let i = 0;
+    function up() {
+      if (i < 2) {
+        item.classList.add('active');
+        i++;
+      } if (i === 2) {
+        hiddenMenu();
+        i++;
+      }
+    }
+    item.addEventListener('click', up);
+  })
 }
 
 function showHard () {
   game.innerHTML =`${hard}`
+  cards = document.querySelectorAll('.game-card');
+  cards.forEach(function (item) {
+    // При нажатии на карту, происходит переворачивание.
+    let i = 0;
+    function up() {
+      if (i < 2) {
+        item.classList.toggle('active');
+        i++;
+      } if (i === 2) {
+        hiddenMenu();
+        i++;
+      }
+    }
+    item.addEventListener('click', up);
+  })
 }
 
 button.addEventListener('click', discoverLevel );
-
-// При нажатии на карту, происходит переворачивание.
+//1111111 обойтись одной функцией для отрисовки карт,
+// внутри поставить условие, чтобы в зависимости от уровня выдавалось нужное количество карт
 
 // Карта BUG появляется рандомно? Если надо.
 
